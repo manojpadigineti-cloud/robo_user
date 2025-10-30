@@ -1,4 +1,4 @@
-name: cart_ci_pipeline
+name: user_ci_pipeline
 on:
   workflow_dispatch:
   push:
@@ -6,7 +6,7 @@ on:
       - "main"
 run-name: ${{ github.sha }} | ${{ github.event.head_commit.message }}
 jobs:
-  cart-ms:
+  user-ms:
     uses: manojpadigineti-cloud/github_actions_pipelines/.github/workflows/CI.yml@main
     with:
       app_name: user
